@@ -1,0 +1,148 @@
+% A Template for Professional CV/Resume
+% Preamble Begins Here
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage{fontawesome}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{newtxtext,newtxmath}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{graphicx}
+\usepackage{transparent}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{array} 
+\usepackage{colortbl}
+
+% For hiding page no
+\pagestyle{empty}
+
+% Define Command for name and job position
+\newcommand{\myname}[1]{\textbf{\Huge\selectfont\MakeUppercase{#1}}\\}
+\newcommand{\myjobtitle}[1]{{\large #1}\\}
+
+% Define Command For Topic,Upper case subtopic,Subtopic and Short Horizontal Black Line 
+\newcommand{\myline}[1]{\rule{#1}{1.0pt}\\}
+
+\newcommand{\topic}[1]{\textbf{\Large\selectfont\MakeUppercase{#1}}\\\vspace{-0.5cm}\myline{1.0cm}}
+
+\newcommand{\uppersubtopic}[1]{\textbf{\normalsize\selectfont\MakeUppercase{#1}}\\}
+
+\newcommand{\subtopic}[1]{\textbf{\normalsize\selectfont{#1}}\\}
+% Sub topic with location side by side 
+\newcommand{\lsubtopic}[3]{
+  \begin{minipage}[t]{0.7\linewidth}
+    \textbf{\normalsize\selectfont{#1}}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.25\linewidth}
+    \raggedleft
+    {#2\\}
+  \end{minipage}
+  \par
+}
+% location
+\newcommand{\adress}[1]{\normalsize\selectfont{#1}}
+
+% Preamble ends Here
+
+\begin{document}
+
+
+% Name, job title, and horizontal line
+\setstretch{1.5}
+\begin{flushleft}
+  \myname{ANDRII} %name
+  \myname{AMITAN} %surname
+  \myjobtitle{Software Developer} %designation
+   \textcolor{gray!50}{\rule{\linewidth}{1pt}}\\
+\end{flushleft}
+
+% Separating Rest of document on two column
+% First Page
+\vspace{-1.25cm} % To make horizontal and vertical line                         meet
+\begin{multicols}{2}
+\setlength{\arrayrulewidth}{1pt} % Set line thickness
+\arrayrulecolor{gray!50}
+
+\noindent\begin{tabular}{p{0.3\textwidth}|@{\hspace{5mm}}p{0.65\textwidth}}
+
+{
+\setstretch{1.5}
+\begin{flushleft}
+\topic{DETAILS}
+\uppersubtopic{address} 
+Scharfenberger Strasse 13, 13505\\
+Berlin\\
+\uppersubtopic{phone}
++49 152 51918307\\ % give your contact no here
+\uppersubtopic{email}
+mr.andrey.amitan@gmail.com\\ % mail adress here
+\uppersubtopic{Date/Place of Birth}
+28.11.2004\\ % Date of birth and place
+Donetsk,\\
+Ukraine\\
+\uppersubtopic{Nationality}
+Ukrainian\\
+\uppersubtopic{Driving Licence}
+No\\
+\topic{skills} % provide your skills here
+Python\\
+LaTex\\
+MySQL\\
+HTML/CSS\\
+\topic{Languages}
+Ukrainian\\
+Russian\\
+English\\
+German\\
+\end{flushleft}
+}
+&
+{
+\setstretch{1.5}
+\begin{flushleft}
+    \topic{About me} % provide your field and interests 
+    \include{about_me}
+    
+     \textcolor{gray!50}{\rule{\linewidth}{0.5pt}}\\
+     
+    \topic{education} % edit your institutions and courser in lsubtopic give course, institutation name in first and provide adress in second 
+    \lsubtopic{Optima School}{Kyiv, Ukraine} 
+    
+       March 2022 - May 2022
+    \begin{itemize}
+        \item A certificate of basic secondary education (Svitstvo pro zdobutya bazovoi serednyoi osviti)
+        \item Medal of Honor (Zolota medal)
+    \end{itemize}
+  
+\lsubtopic{GISMA University of Applied Sciences}{Potsdam, Germany}
+
+ January 2023 - till now
+\begin{itemize}
+    \item Python Programming
+    \item Data Structures and Algorithms
+    \item Databases and Big Data
+\end{itemize}
+
+\topic{Experience}
+
+\lsubtopic{Volunteering: x3mal camp}{Kyiv, Ukraine}
+
+\include{experience}
+
+
+\end{flushleft}
+}
+\end{tabular}
+\end{multicols}
+
+% page two
+
+\pagebreak
+\end{document}
+
