@@ -10,7 +10,7 @@ body {
 .wrapper {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 10rem 20rem 20rem;
+    grid-template-rows: 10rem 20rem 20rem 30rem 10rem;
 }
 
 .head {
@@ -85,4 +85,14 @@ a:visited {
 
 a:hover {
     text-decoration: underline;
+}
+
+#about {
+    color: white;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    font-size: 4rem;
+    font-family: "Montserrat", sans-serif;
 }
